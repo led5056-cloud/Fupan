@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-11-18 竞价推荐</title>
+<meta name="jjtj-version" content="2026-11-18-auto">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#222;font-size:14px;line-height:1.5;padding:12px 12px 48px;max-width:720px;margin:0 auto}
+h1{font-size:18px;margin:4px 0 6px}
+.sub{color:#666;font-size:12px;margin-bottom:12px}
+.card{background:#fff;border-radius:10px;padding:12px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #d0d7e2}
+.card>h2{margin:0 0 8px;font-size:15px;border-left:4px solid #1a56db;padding-left:8px}
+.lead{background:#eef4ff;border:1px solid #c9d8f5;border-radius:10px;padding:10px 12px;margin-bottom:12px}
+.lead b{color:#1a56db}
+.pick{border:1px solid #e6e9ee;border-radius:8px;padding:10px;margin:8px 0;background:#fafbfd}
+.pick h3{font-size:14px;margin:0 0 6px;color:#111}
+.pick .meta{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:12px;color:#555;margin-bottom:6px}
+.pick .meta span{background:#fff;border:1px solid #e6e9ee;border-radius:6px;padding:2px 7px}
+.pick p{font-size:13px;color:#222;margin:4px 0}
+.cons{margin:6px 0 0;padding-left:18px;color:#8a4b00;font-size:12px}
+.cons li{margin:2px 0}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:6px 6px;border-bottom:1px solid #eee;text-align:left;vertical-align:top}
+th{background:#fafafa;color:#666;font-weight:600}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.up{color:#d32f2f;font-weight:600}
+.dn{color:#0e9a5f}
+.badge{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;margin:0 2px 0 0;white-space:nowrap;background:#f0f2f5;color:#555}
+.badge.warn{background:#fff3c4;color:#8a6100;border:1px solid #f0d78c}
+.badge.danger{background:#fdeaea;color:#c62828}
+.ntag-card{display:inline-block;background:#e53935;color:#fff;border:1px solid #c62828;border-radius:4px;padding:0 5px;margin:0 0 0 3px;font-size:10px;font-weight:700;line-height:1.55;white-space:nowrap;vertical-align:middle;box-shadow:0 1px 2px rgba(198,40,40,.28)}
+.muted{color:#888;font-size:12px}
+.props{display:grid;grid-template-columns:88px 1fr;gap:4px 8px;font-size:12px;margin:6px 0 8px;align-items:start}
+.props .k{color:#888}
+.props .v{color:#222}
+.yk{display:flex;flex-direction:column;gap:2px}
+.yk-lab{font-weight:700;font-size:11px;margin-top:4px;letter-spacing:.04em}
+.yk-lab:first-child{margin-top:0}
+.yk-row{line-height:1.45;word-break:break-word}
+.yk-row b{font-weight:600;color:#222}
+details.gate{margin-bottom:12px;border:1px solid #d0d7e2;border-radius:10px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden}
+details.gate>summary{list-style:none;cursor:pointer;padding:12px;font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:space-between;user-select:none}
+details.gate>summary::-webkit-details-marker{display:none}
+details.gate>summary::after{content:"展开";font-size:12px;font-weight:500;color:#1a56db}
+details.gate[open]>summary::after{content:"收起"}
+details.gate .body{padding:0 12px 12px;border-top:1px solid #eef0f4}
+details.gate ol{margin:8px 0 0;padding-left:18px}
+details.gate li{margin:6px 0;font-size:13px}
+details.gate li b{display:block;margin-bottom:2px}
+.drop{margin:6px 0;padding:8px;border-radius:8px;background:#fafbfd;border:1px solid #e6e9ee}
+.drop .t{font-weight:600;font-size:13px}
+.drop .d{font-size:12px;color:#555;margin-top:2px}
+ul.rules{padding-left:18px;margin:4px 0}
+ul.rules li{margin:4px 0;font-size:13px}
+.pperf-grid{margin:4px 0 6px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:100%}@media(max-width:720px){.pperf-grid{grid-template-columns:1fr}}
+.pperf-col{background:#fafbfd;border:1px solid #e6e9ee;border-radius:8px;padding:8px;min-width:0}
+.pperf-col>h3{margin:0 0 6px;font-size:13px;color:#222;font-weight:600}
+.pperf-sec{margin:0 0 8px}
+.pperf-sec:last-child{margin-bottom:0}
+.pperf-sec-h{font-size:11px;color:#888;font-weight:600;margin:0 0 4px}
+.pperf-metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px}
+.pperf-metric{min-width:0;text-align:center}
+.pperf-metric .lab{display:block;font-size:10px;color:#999;line-height:1.1}
+.pperf-metric .val{display:block;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.25;margin-top:2px;white-space:nowrap}
+.pperf-sub{margin:4px 0 0;font-size:11px;color:#888;line-height:1.35}
+
+.news-card{overflow:hidden;max-width:100%;box-sizing:border-box}
+.news-list{display:flex;flex-direction:column;gap:0;max-width:100%;overflow:hidden}
+.news-item{padding:7px 0;border-bottom:1px solid #e6e9ee;max-width:100%;overflow:hidden;box-sizing:border-box}
+.news-item:last-child{border-bottom:0;padding-bottom:0}
+.news-ttl{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;word-break:break-word;overflow-wrap:anywhere;line-height:1.35;max-width:100%;font-size:13px;color:#1f2329}
+.news-ttl a{color:inherit;text-decoration:none}
+.news-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:4px;max-width:100%;min-width:0}
+.news-src{flex:0 0 auto;font-size:11px;color:#7a828e;white-space:nowrap;max-width:40%;overflow:hidden;text-overflow:ellipsis}
+.news-sec{display:flex;flex-wrap:wrap;gap:3px;align-items:center;min-width:0;max-width:100%;overflow:hidden}
+.news-sec .badge{font-size:11px;padding:0 5px;margin:0;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+
+table.picks{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+table.picks th,table.picks td{padding:6px 4px;border-bottom:1px solid #eee;text-align:left;vertical-align:middle}
+table.picks th{background:#fafafa;color:#666;font-weight:600;white-space:nowrap}
+table.picks td.num,table.picks th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.picks .m925-name{display:block;min-width:0}
+table.picks .m925-nm{display:block;white-space:nowrap;font-weight:600;font-size:12px;line-height:1.15}
+table.picks .m925-cd{display:block;font-size:10px;color:#888;white-space:nowrap;line-height:1.1;font-variant-numeric:tabular-nums;margin-top:1px}
+table.picks td.theme{word-break:break-all;line-height:1.25}
+
+/* 推荐一览：连板/首板分段 + 淡色因子卡 */
+.ov-cap{color:#888;font-size:11px;margin:0 0 2px;padding-left:12px}
+.ov .ghead{margin:10px -12px 0;padding:5px 12px;background:#f3f6fb;font-size:12px;font-weight:700;color:#1a56db;border-top:1px solid #e8edf5;border-bottom:1px solid #e8edf5;display:flex;align-items:baseline;justify-content:space-between}
+.ov .ghead .n{font-weight:500;font-size:11px;color:#7a8699}
+.ov .row{padding:8px 0;border-bottom:1px solid #eee}
+.ov .gblock .row:last-child{border-bottom:0;padding-bottom:2px}
+.ov .top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.ov .nm{min-width:0;flex:1;color:inherit;text-decoration:none}
+.ov a.nm:hover .n,.ov a.nm:focus .n{text-decoration:underline}
+.ov .nm .nline{display:flex;align-items:baseline;gap:6px;min-width:0;max-width:100%}
+.ov .nm .n{display:block;white-space:nowrap;font-weight:600;font-size:13px;line-height:1.2;color:#111}
+.ov .nm .cl{flex:0 0 auto;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1.2}
+.ov .nm .cl.up{color:#d32f2f}
+.ov .nm .cl.dn{color:#0e9a5f}
+.ov .nm .cd{display:block;font-size:10px;color:#888;white-space:nowrap;line-height:1.3;font-variant-numeric:tabular-nums;margin-top:2px}
+.ov .metrics{display:grid;grid-template-columns:36px 56px 48px 48px 44px;column-gap:4px;flex:0 0 244px;width:244px;padding-top:1px;grid-auto-flow:column}
+.ov .m{text-align:right;min-width:0;white-space:nowrap}
+.ov .m .v{display:block;font-variant-numeric:tabular-nums;font-size:13px;line-height:1.2;font-weight:700;color:#222}
+.ov .m .v.up{color:#d32f2f}
+.ov .m .v.dn{color:#0e9a5f}
+.ov .m .lab{display:block;font-size:9px;color:#9aa3af;font-weight:500;line-height:1.2;margin-top:2px;text-align:right}
+.ov .chips{margin-top:6px;display:flex;flex-wrap:wrap;gap:4px}
+.ov .empty{color:#888;font-size:12px;padding:8px 0}
+.fc{display:inline-block;border-radius:4px;padding:0 5px;font-size:10px;font-weight:600;line-height:1.55;white-space:nowrap}
+.fc-sec{background:rgba(28,92,208,.14);color:#1a4fb3;border:1px solid rgba(28,92,208,.28)}
+.fc-hot{background:rgba(236,108,0,.14);color:#c05600;border:1px solid rgba(236,108,0,.28)}
+.fc-news{background:rgba(0,136,120,.14);color:#007062;border:1px solid rgba(0,136,120,.28)}
+.fc-seat{background:rgba(104,24,152,.14);color:#681898;border:1px solid rgba(104,24,152,.28)}
+.fc-zb{background:rgba(216,24,96,.14);color:#c01658;border:1px solid rgba(216,24,96,.28)}
+.fc-risk{background:rgba(92,99,112,.08);color:#5c6370;border:1px solid rgba(92,99,112,.18)}
+a.ths-stock{color:inherit;text-decoration:none}a.ths-stock:hover,a.ths-stock:focus{text-decoration:underline}
+</style>
+</head>
+<body>
+<h1>2026-11-18 竞价推荐</h1>
+<p class="sub">🟢强势 · 连板 0 · 趋势板 2 · 首板 8</p>
+
+<div class="lead">
+  <b>最终推荐 10 只</b>：趋势板 <b><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600410" target="_self" rel="noopener noreferrer">华胜天成</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002148" target="_self" rel="noopener noreferrer">北纬科技</a></b>；首板 <b><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002242" target="_self" rel="noopener noreferrer">九阳股份</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600619" target="_self" rel="noopener noreferrer">海立股份</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603078" target="_self" rel="noopener noreferrer">江化微</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D301209" target="_self" rel="noopener noreferrer">联合化学</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603206" target="_self" rel="noopener noreferrer">嘉环科技</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002983" target="_self" rel="noopener noreferrer">芯瑞达</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000707" target="_self" rel="noopener noreferrer">双环科技</a>、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002843" target="_self" rel="noopener noreferrer">泰嘉股份</a></b>。
+</div>
+
+<div class="card ov">
+  <h2>推荐一览</h2>
+  <p class="ov-cap">羊字辈 / 东方红卡 · 有效期20个交易日（至 12-08）</p>
+<div class="ghead">连板<span class="n">0 只</span></div>
+<div class="gblock">
+  <div class="empty">本日无终选</div>
+</div>
+<div class="ghead">趋势板<span class="n">2 只</span></div>
+<div class="gblock">
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600410" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">华胜天成</span></span><span class="cd">600410 · 3天2板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">118</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+4.58%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">1.41亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">14.03亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">168亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-sec">TOP2·AI应用/算力-1</span><span class="fc fc-hot">双榜人前20</span><span class="fc fc-zb">炸板高开×1</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002148" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">北纬科技</span></span><span class="cd">002148 · 4天4板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">57</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+6.04%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">1.66亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">16.03亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">--</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-hot">单榜·同花顺</span><span class="fc fc-news">新闻·AI/算力</span><span class="fc fc-seat">游资·大小说家</span><span class="fc fc-risk">天量难续</span></div>
+  </div>
+</div>
+<div class="ghead">首板<span class="n">8 只</span></div>
+<div class="gblock">
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002242" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">九阳股份</span></span><span class="cd">002242 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">126</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+3.11%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">2.15亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">35.44亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">240亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="ntag-card">羊字辈</span><span class="fc fc-sec">TOP3·家电-2</span><span class="fc fc-hot">双榜人前20</span><span class="fc fc-seat">游资·大小说家</span><span class="fc fc-zb">炸板高开×2</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600619" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">海立股份</span></span><span class="cd">600619 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">95</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+3.05%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">0.42亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">6.40亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">103亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-sec">TOP1·半导体（光刻材料/设备/封装）-4</span><span class="fc fc-hot">双榜人前20</span><span class="fc fc-news">新闻·半导体</span><span class="fc fc-risk">天量难续</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603078" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">江化微</span></span><span class="cd">603078 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">90</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+3.50%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">0.23亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">3.88亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">95亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-sec">TOP1·半导体（光刻材料/设备/封装）-5</span><span class="fc fc-hot">单榜·东财</span><span class="fc fc-news">新闻·半导体</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D301209" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">联合化学</span></span><span class="cd">301209 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">71</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+19.43%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">0.63亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">6.33亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">71亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-news">大小说家买入</span><span class="fc fc-sec">TOP1·半导体（光刻材料/设备/封装）</span><span class="fc fc-news">新闻·半导体</span><span class="fc fc-seat">游资·大小说家</span><span class="fc fc-zb">炸板高开×1</span><span class="fc fc-risk">天量难续</span><span class="fc fc-risk">竞价透支</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603206" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">嘉环科技</span></span><span class="cd">603206 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">70</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+2.59%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">0.15亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">1.56亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">45亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-sec">TOP2·AI应用/算力-2</span><span class="fc fc-zb">炸板高开×1</span><span class="fc fc-risk">天量难续</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002983" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">芯瑞达</span></span><span class="cd">002983 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">66</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+2.30%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">0.11亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">1.52亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">31亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-zb">炸板高开×2</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000707" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">双环科技</span></span><span class="cd">000707 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">52</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+4.79%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">0.20亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">1.69亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">25亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-zb">炸板高开×1</span><span class="fc fc-risk">天量难续</span></div>
+  </div>
+  <div class="row">
+    <div class="top">
+      <a class="ths-stock nm" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002843" target="_self" rel="noopener noreferrer"><span class="nline"><span class="n">泰嘉股份</span></span><span class="cd">002843 · 1天1板</span></a>
+      <div class="metrics">
+        <div class="m"><span class="v">49</span><span class="lab">分数</span></div>
+        <div class="m"><span class="v up">+4.00%</span><span class="lab">竞价</span></div>
+        <div class="m"><span class="v">0.27亿</span><span class="lab">竞价额</span></div>
+        <div class="m"><span class="v">6.91亿</span><span class="lab">昨日额</span></div>
+        <div class="m"><span class="v">39亿</span><span class="lab">市值</span></div>
+      </div>
+    </div>
+    <div class="chips"><span class="fc fc-hot">单榜·东财</span><span class="fc fc-zb">炸板高开×2</span><span class="fc fc-risk">天量难续</span></div>
+  </div>
+</div>
+</div>
+
+<div class="card news-card">
+  <h2>盘前新闻→板块</h2>
+  <p class="muted">更新 2026-11-18 09:20:44 · 重要5条 / 映射19 · 源告警1</p>
+  <div class="news-list"><div class="news-item"><div class="news-ttl"><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxQemJ2WmtQZV96U0x6Z1FzanV3YlQwT2k5ZXk3Wnc3RzI2cVFsNDdjaHk5TTJJU0FiNnVPYllVYnRVcjZkTEMwYVZ6bU01SE54THNuRl9NdUVrekhxdXlwaVBubmhJTEt6Z1V4R2kwTGpjdmVkdkxxVl9vVkZXYWFuR1lEdjRWUnVPVG4tQVRLdVp4bXJvaVhSM1pXN25keDRrNXA4S0dvWWZoX3FfSE93?oc=5" target="_blank" rel="noopener">独家：随着芯片限制的影响，中国利用美国人工智能模型来训练本土竞争对手</a></div><div class="news-meta"><span class="news-src">Reuters</span><span class="news-sec"><span class="badge">半导体</span><span class="badge">AI/算力</span><span class="badge">中国相关</span></span></div></div><div class="news-item"><div class="news-ttl"><a href="https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener">英伟达表示不会恢复黄仁勋的职位，因为该公司报告业绩喜人</a></div><div class="news-meta"><span class="news-src">BBC Business</span><span class="news-sec"><span class="badge">半导体</span><span class="badge">AI/算力</span></span></div></div><div class="news-item"><div class="news-ttl"><a href="https://www.cnbc.com/2026/11/17/apple-microsoft-faa-jpmorgan-outages.html" target="_blank" rel="noopener">大范围的停电袭击了银行、航空旅行、美国国家安全局和苹果公司，似乎一切都被扰乱了</a></div><div class="news-meta"><span class="news-src">CNBC</span><span class="news-sec"><span class="badge">AI/算力</span><span class="badge">金融/宏观</span></span></div></div><div class="news-item"><div class="news-ttl"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPamZVTFBIMlk1aHp5ZUZ3ME56bnZlV3NPODhQY3JKcnI2dUtIT0FqSHFveTRSem1Rby14eXY4dnhCci1WWmNJdEZnTnNnOUJldUROSXFWc1I5SmExVXZ2dWlhMWhQSkpqTFJIN1R2aTJsX2tJQ1l6cnhRY2JWdTNpVjNKZFhuelREd1A1S29BYUhDRHlTNWxncUJ3aHFobUU1NFZNTVlkbkxLUWExUFVjWHpOSHo3aE0?oc=5" target="_blank" rel="noopener">独家报道：尽管亚马逊、谷歌、Meta 游说，特朗普的中国数据中心仍受到限制</a></div><div class="news-meta"><span class="news-src">Reuters</span><span class="news-sec"><span class="badge">AI/算力</span><span class="badge">中国相关</span></span></div></div><div class="news-item"><div class="news-ttl"><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQWkxwR0lDSTlWVnhqS0FvQXY0VUllMGZ4MWdtZ0lQVXNTaVNzSlluaFlQV05zcHNDVGpSTFdFM09PZXRXTWZMLTZiYjVIZUFSQm5rejh6SmxOTndicUphR3FrWGR1cER5ODNERFNJbEJtVGxvYnhqT2tZdlhrV3ktdGotQ3VyVmMydG5CN1ZST2l0bVprMHgxN3JFdGNCX1lRMW15OUk1YXRhYmVtS1RCaw?oc=5" target="_blank" rel="noopener">EXCUSIVE:随着工厂成本的上涨,全球机制计划对机器人进行20%的提升</a></div><div class="news-meta"><span class="news-src">Reuters</span><span class="news-sec"><span class="badge">机器人</span><span class="badge">汽车</span></span></div></div></div>
+</div>
+
+<div class="card">
+  <h2>推荐成效</h2>
+  <p class="muted" style="margin-bottom:8px">成功 = T 日涨停；溢价 = T+1 09:35 剔一字。真实推送宇宙 · 有推送日 11-04 / 11-05 / 11-06 / 11-09 / 11-10 / 11-11 / 11-12 / 11-13 / 11-16 / 11-17（更新 2026-11-17 17:46:32，隔夜复盘口径）。最近有推送日 11-17 成功率已结算；11-17 隔日溢价 / 11-18 当日成功率待收盘与 09:35 补齐。</p><div class="pperf-grid"><div class="pperf-col"><h3>连板</h3><div class="pperf-sec"><div class="pperf-sec-h">最近有推送日 11-17 主推</div><div class="pperf-metrics"><div class="pperf-metric"><span class="lab">样本</span><span class="val">1</span></div><div class="pperf-metric"><span class="lab">成功率</span><span class="val"><span class="dn">0.0%</span></span></div><div class="pperf-metric"><span class="lab">溢价均</span><span class="val">--</span></div></div><div class="pperf-sub">涨停0 · 溢价待补(T+1 09:35)</div></div><div class="pperf-sec"><div class="pperf-sec-h">近有推送日（5日）</div><div class="pperf-metrics"><div class="pperf-metric"><span class="lab">样本</span><span class="val">10</span></div><div class="pperf-metric"><span class="lab">成功率</span><span class="val"><span class="dn">30.0%</span></span></div><div class="pperf-metric"><span class="lab">溢价均</span><span class="val"><span class="up">+1.48%</span></span></div></div><div class="pperf-sub">涨停3 · 中位+1.54% · 溢价3</div></div></div><div class="pperf-col"><h3>趋势板</h3><div class="pperf-sec"><div class="pperf-sec-h">最近有推送日 11-17 主推</div><div class="pperf-metrics"><div class="pperf-metric"><span class="lab">样本</span><span class="val">0</span></div><div class="pperf-metric"><span class="lab">成功率</span><span class="val">--</span></div><div class="pperf-metric"><span class="lab">溢价均</span><span class="val">--</span></div></div><div class="pperf-sub">涨停0 · 溢价待补(T+1 09:35)</div></div><div class="pperf-sec"><div class="pperf-sec-h">近有推送日（5日）</div><div class="pperf-metrics"><div class="pperf-metric"><span class="lab">样本</span><span class="val">1</span></div><div class="pperf-metric"><span class="lab">成功率</span><span class="val"><span class="up">100.0%</span></span></div><div class="pperf-metric"><span class="lab">溢价均</span><span class="val"><span class="dn">-9.89%</span></span></div></div><div class="pperf-sub">涨停1 · 中位−9.89% · 溢价1</div></div></div><div class="pperf-col"><h3>首板</h3><div class="pperf-sec"><div class="pperf-sec-h">最近有推送日 11-17 主推</div><div class="pperf-metrics"><div class="pperf-metric"><span class="lab">样本</span><span class="val">3</span></div><div class="pperf-metric"><span class="lab">成功率</span><span class="val"><span class="dn">33.3%</span></span></div><div class="pperf-metric"><span class="lab">溢价均</span><span class="val">--</span></div></div><div class="pperf-sub">涨停1（顺钠股份） · 溢价0·待补1</div></div><div class="pperf-sec"><div class="pperf-sec-h">近有推送日（5日）</div><div class="pperf-metrics"><div class="pperf-metric"><span class="lab">样本</span><span class="val">33</span></div><div class="pperf-metric"><span class="lab">成功率</span><span class="val"><span class="dn">30.3%</span></span></div><div class="pperf-metric"><span class="lab">溢价均</span><span class="val"><span class="up">+3.11%</span></span></div></div><div class="pperf-sub">涨停10 · 中位+4.98% · 溢价9·待补1</div></div></div></div>
+</div>
+
+<div class="card">
+  <h2>竞价前环境</h2>
+  <div class="props">
+    <div class="k">昨收风格</div><div class="v">科技 -0.9% · 情绪 -2.6% · 银行 -0.2% · 红利 -0.6%（11-17 收盘快照）</div>
+    <div class="k">昨涨停 D1</div><div class="v">闸门辅 D1（20261117 涨停股）均 +0.23%（32只·盈率50%）· 连板中位 -6.89%</div>
+    <div class="k">昨晚板块</div><div class="v"><div class="yk"><div class="yk-lab up">利好</div><div class="yk-row"><b>半导体（光刻材料/设备/封装） 11家</b>：合并光刻胶、光刻机、存储芯片、中芯概念、先进封装、PCB。西陇科学、国林科技、盛剑科技、江化微、格林达、联合化学、有研新材、佳先股份、永新光学、海立股份、东方嘉盛</div><div class="yk-row"><b>AI应用/算力 5家</b>：合并CPO、AI应用、算力租赁。华胜天成、中新赛克、嘉环科技、真视通、北投科技</div><div class="yk-row"><b>家电 3家</b>：合并白色家电、小家电。长虹美菱、小熊电器、九阳股份</div><div class="yk-row"><b>化工 2家</b>：双环科技、江南化工</div><div class="yk-row"><b>商业航天 2家</b>：合并商业航天。阳光照明、泰嘉股份</div><div class="yk-row"><b>建材装饰 2家</b>：扬子新材、全筑股份</div><div class="yk-lab dn">利空</div><div class="yk-row"><b>传媒 16家</b>：游戏、影视、出版和广告</div><div class="yk-row"><b>消费 9家</b>：零售、食品饮料</div><div class="yk-row"><b>机器人 8家</b>：汽车零部件和自动化设备，接到机器人链条上</div><div class="yk-row"><b>新能源 3家</b>：光伏和电网设备</div><div class="yk-row"><b>通用设备 3家</b></div></div></div>
+    <div class="k">盘前新闻</div><div class="v">AI/算力（8） · 半导体（6） · 油气能源 / 金融/宏观 / 汽车（09:20 · 外媒）</div>
+    <div class="k">闸门档</div><div class="v">🟢强势 · 连板/趋势板/首板按规则全推 · 竞价均涨 +3.19%（37只）</div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>推荐理由</h2>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600410" target="_self" rel="noopener noreferrer">华胜天成</a> · 趋势板 <span class="badge">600410</span></h3>
+    <div class="meta">
+      <span>主板</span><span>3天2板</span><span>925：118</span><span>竞价 +4.58%</span><span>竞价额 1.41亿</span><span>昨日额 14.03亿</span><span>市值 168亿</span><span>双榜人前20</span><span>换手板</span>
+    </div>
+    <p>趋势板最高分。竞价+4.6%温吞高开，承接量占昨9.5%重承接。命中双榜人前20。市值约 168亿。</p>
+    <ul class="cons">
+      <li>AI应用/算力线跟风密度高（5家），需看开盘后辨识度</li><li>对照观察优先，不替代盘中风控</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002148" target="_self" rel="noopener noreferrer">北纬科技</a> · 趋势板 <span class="badge">002148</span></h3>
+    <div class="meta">
+      <span>主板</span><span>4天4板</span><span>925：57</span><span>竞价 +6.04%</span><span>竞价额 1.66亿</span><span>昨日额 16.03亿</span><span>通信服务</span><span>同花顺人前20</span><span>游资·大小说家</span>
+    </div>
+    <p>通信服务线趋势板，竞价 +6.0%，承接量占昨10.0%重承接。命中新闻 AI/算力，命中同花顺人前20，席位溢价·大小说家。</p>
+    <ul class="cons">
+      <li>竞价已 +6.0%，买点一般，不宜纯打板</li><li>昨量能偏大「天量难续」，溢价预期需打折</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002242" target="_self" rel="noopener noreferrer">九阳股份</a> · 首板 <span class="badge">002242</span></h3>
+    <div class="meta">
+      <span>主板</span><span>1天1板</span><span>925：126</span><span>竞价 +3.11%</span><span>竞价额 2.15亿</span><span>昨日额 35.44亿</span><span>市值 240亿</span><span>双榜人前20</span><span>游资·大小说家</span><span>换手板</span>
+    </div>
+    <p>首板最高分。家电-2 TOP3（3家），竞价+3.1%温吞高开，承接量占昨5.3%重承接。命中双榜人前20，席位溢价·大小说家。市值约 240亿。纪律：少做 9:25 排队，偏封死再追。</p>
+    <ul class="cons">
+      <li>题材非盘前新闻主线，宽度可能偏弱</li><li>市值在终选中偏大，空间可能弱于小市值票</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600619" target="_self" rel="noopener noreferrer">海立股份</a> · 首板 <span class="badge">600619</span></h3>
+    <div class="meta">
+      <span>主板</span><span>1天1板</span><span>925：95</span><span>竞价 +3.05%</span><span>竞价额 0.42亿</span><span>昨日额 6.40亿</span><span>市值 103亿</span><span>双榜人前20</span><span>换手板</span>
+    </div>
+    <p>半导体（光刻材料/设备/封装）-4 TOP1（11家）首板，竞价+3.1%温吞高开，承接量占昨6.3%重承接。命中新闻 半导体，命中双榜人前20。市值约 103亿。纪律：少做 9:25 排队，偏封死再追。</p>
+    <ul class="cons">
+      <li>昨量能偏大「天量难续」，溢价预期需打折</li><li>半导体（光刻材料/设备/封装）线跟风密度高（11家），需看开盘后辨识度</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603078" target="_self" rel="noopener noreferrer">江化微</a> · 首板 <span class="badge">603078</span></h3>
+    <div class="meta">
+      <span>主板</span><span>1天1板</span><span>925：90</span><span>竞价 +3.50%</span><span>竞价额 0.23亿</span><span>昨日额 3.88亿</span><span>市值 95亿</span><span>东财人前20</span><span>换手板</span>
+    </div>
+    <p>半导体（光刻材料/设备/封装）-5 TOP1（11家）首板，竞价+3.5%温吞高开，承接量占昨5.5%重承接。命中新闻 半导体，命中东财人前20。市值约 95亿。纪律：少做 9:25 排队，偏封死再追。</p>
+    <ul class="cons">
+      <li>半导体（光刻材料/设备/封装）线跟风密度高（11家），需看开盘后辨识度</li><li>对照观察优先，不替代盘中风控</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D301209" target="_self" rel="noopener noreferrer">联合化学</a> · 首板 <span class="badge">301209</span></h3>
+    <div class="meta">
+      <span>创业板</span><span>1天1板</span><span>925：71</span><span>竞价 +19.43%</span><span>竞价额 0.63亿</span><span>昨日额 6.33亿</span><span>市值 71亿</span><span>游资·大小说家</span><span>换手板</span>
+    </div>
+    <p>大小说家昨日买入，隔日无条件直推。半导体（光刻材料/设备/封装） TOP1（11家），竞价 +19.4%，承接量占昨7.9%重承接。命中新闻 半导体，席位溢价·大小说家。市值约 71亿。不因低开、今一字、竞价区间、分数或方案 H 剔除。</p>
+    <ul class="cons">
+      <li>今竞价已一字透支，买点极差，开盘后分歧或一字开板风险</li><li>昨量能偏大「天量难续」，溢价预期需打折</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603206" target="_self" rel="noopener noreferrer">嘉环科技</a> · 首板 <span class="badge">603206</span></h3>
+    <div class="meta">
+      <span>主板</span><span>1天1板</span><span>925：70</span><span>竞价 +2.59%</span><span>竞价额 0.15亿</span><span>昨日额 1.56亿</span><span>市值 45亿</span><span>换手板</span>
+    </div>
+    <p>AI应用/算力-2 TOP2（5家）首板，竞价+2.6%温吞高开，承接量占昨9.0%重承接。市值约 45亿。纪律：少做 9:25 排队，偏封死再追。</p>
+    <ul class="cons">
+      <li>昨量能偏大「天量难续」，溢价预期需打折</li><li>AI应用/算力线跟风密度高（5家），需看开盘后辨识度</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002983" target="_self" rel="noopener noreferrer">芯瑞达</a> · 首板 <span class="badge">002983</span></h3>
+    <div class="meta">
+      <span>主板</span><span>1天1板</span><span>925：66</span><span>竞价 +2.30%</span><span>竞价额 0.11亿</span><span>昨日额 1.52亿</span><span>市值 31亿</span><span>显示</span><span>换手板</span>
+    </div>
+    <p>显示线，竞价+2.3%温吞高开，承接量占昨7.3%重承接。市值约 31亿。纪律：少做 9:25 排队，偏封死再追。</p>
+    <ul class="cons">
+      <li>题材非盘前新闻主线，宽度可能偏弱</li><li>人气未进东财前20，关注度弱于同组龙头</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000707" target="_self" rel="noopener noreferrer">双环科技</a> · 首板 <span class="badge">000707</span></h3>
+    <div class="meta">
+      <span>主板</span><span>1天1板</span><span>925：52</span><span>竞价 +4.79%</span><span>竞价额 0.20亿</span><span>昨日额 1.69亿</span><span>市值 25亿</span><span>化工</span><span>换手板</span>
+    </div>
+    <p>化工线，竞价+4.8%温吞高开，承接量占昨11.1%重承接。市值约 25亿。纪律：少做 9:25 排队，偏封死再追。</p>
+    <ul class="cons">
+      <li>昨量能偏大「天量难续」，溢价预期需打折</li><li>题材非盘前新闻主线，宽度可能偏弱</li>
+    </ul>
+  </div>
+
+  <div class="pick">
+    <h3><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002843" target="_self" rel="noopener noreferrer">泰嘉股份</a> · 首板 <span class="badge">002843</span></h3>
+    <div class="meta">
+      <span>主板</span><span>1天1板</span><span>925：49</span><span>竞价 +4.00%</span><span>竞价额 0.27亿</span><span>昨日额 6.91亿</span><span>市值 39亿</span><span>商业航天</span><span>东财人前20</span><span>换手板</span>
+    </div>
+    <p>商业航天线，竞价+4.0%温吞高开，承接量占昨3.7%。命中东财人前20。市值约 39亿。纪律：少做 9:25 排队，偏封死再追。</p>
+    <ul class="cons">
+      <li>昨量能偏大「天量难续」，溢价预期需打折</li><li>题材非盘前新闻主线，宽度可能偏弱</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <h2>被筛掉的关键对照</h2>
+  <div class="drop">
+    <div class="t"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D300786" target="_self" rel="noopener noreferrer">国林科技</a> <span class="badge danger">非主板</span></div>
+    <div class="d"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D300786" target="_self" rel="noopener noreferrer">国林科技</a>（创业板300786，首板 58 分，竞价 +11.12%，竞价额 0.26亿，昨日额 2.68亿）</div>
+  </div>
+  <div class="drop">
+    <div class="t"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002584" target="_self" rel="noopener noreferrer">西陇科学</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000521" target="_self" rel="noopener noreferrer">长虹美菱</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002685" target="_self" rel="noopener noreferrer">华东重机</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600881" target="_self" rel="noopener noreferrer">亚泰集团</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603030" target="_self" rel="noopener noreferrer">全筑股份</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002451" target="_self" rel="noopener noreferrer">摩恩电气</a> <span class="badge danger">一字板</span></div>
+    <div class="d"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002584" target="_self" rel="noopener noreferrer">西陇科学</a>（首板，107 分，竞价 +9.99%，竞价额 0.92亿，昨日额 3.04亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000521" target="_self" rel="noopener noreferrer">长虹美菱</a>（连板，52 分，竞价 +9.92%，竞价额 0.50亿，昨日额 2.29亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002685" target="_self" rel="noopener noreferrer">华东重机</a>（连板，50 分，竞价 +10.00%，竞价额 0.44亿，昨日额 2.28亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600881" target="_self" rel="noopener noreferrer">亚泰集团</a>（首板，50 分，竞价 +2.89%，竞价额 0.33亿，昨日额 0.95亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D603030" target="_self" rel="noopener noreferrer">全筑股份</a>（首板，42 分，竞价 +9.79%，竞价额 0.13亿，昨日额 1.38亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002451" target="_self" rel="noopener noreferrer">摩恩电气</a>（首板，14 分，竞价 +9.96%，竞价额 0.17亿，昨日额 0.37亿）</div>
+  </div>
+  <div class="drop">
+    <div class="t"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600261" target="_self" rel="noopener noreferrer">阳光照明</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002889" target="_self" rel="noopener noreferrer">东方嘉盛</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002205" target="_self" rel="noopener noreferrer">国统股份</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002535" target="_self" rel="noopener noreferrer">林州重机</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002425" target="_self" rel="noopener noreferrer">凯撒文化</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000533" target="_self" rel="noopener noreferrer">顺钠股份</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600467" target="_self" rel="noopener noreferrer">好当家</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600715" target="_self" rel="noopener noreferrer">文投控股</a> <span class="badge danger">低开</span></div>
+    <div class="d"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600261" target="_self" rel="noopener noreferrer">阳光照明</a>（趋势板，52 分，竞价 -9.82%，竞价额 0.60亿，昨日额 18.92亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002889" target="_self" rel="noopener noreferrer">东方嘉盛</a>（首板，42 分，竞价 -1.97%，竞价额 0.15亿，昨日额 4.15亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002205" target="_self" rel="noopener noreferrer">国统股份</a>（趋势板，26 分，竞价 -10.00%，竞价额 0.11亿，昨日额 2.06亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002535" target="_self" rel="noopener noreferrer">林州重机</a>（首板，20 分，竞价 -2.45%，竞价额 0.16亿，昨日额 3.79亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002425" target="_self" rel="noopener noreferrer">凯撒文化</a>（趋势板，17 分，竞价 -2.58%，竞价额 0.63亿，昨日额 18.20亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000533" target="_self" rel="noopener noreferrer">顺钠股份</a>（连板，13 分，竞价 -6.39%，竞价额 0.78亿，昨日额 18.65亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600467" target="_self" rel="noopener noreferrer">好当家</a>（趋势板，11 分，竞价 -4.00%，竞价额 0.34亿，昨日额 6.47亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600715" target="_self" rel="noopener noreferrer">文投控股</a>（趋势板，9 分，竞价 -10.09%，竞价额 0.18亿，昨日额 22.41亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002226" target="_self" rel="noopener noreferrer">江南化工</a>（首板，-2 分，竞价 -0.55%，竞价额 0.13亿，昨日额 4.78亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600936" target="_self" rel="noopener noreferrer">北投科技</a>（连板，-2 分，竞价 -6.33%，竞价额 0.24亿，昨日额 10.51亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D000819" target="_self" rel="noopener noreferrer">岳阳兴长</a>（趋势板，-10 分，竞价 -6.62%，竞价额 0.10亿，昨日额 5.27亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D601929" target="_self" rel="noopener noreferrer">吉视传媒</a>（趋势板，-10 分，竞价 -5.80%，竞价额 0.21亿，昨日额 20.62亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002187" target="_self" rel="noopener noreferrer">广百股份</a>（趋势板，-15 分，竞价 -10.00%，竞价额 0.13亿，昨日额 16.51亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002861" target="_self" rel="noopener noreferrer">瀛通通讯</a>（连板，-20 分，竞价 -3.28%，竞价额 0.14亿，昨日额 4.31亿）</div>
+  </div>
+  <div class="drop">
+    <div class="t"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600206" target="_self" rel="noopener noreferrer">有研新材</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002771" target="_self" rel="noopener noreferrer">真视通</a> / <a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002652" target="_self" rel="noopener noreferrer">扬子新材</a> <span class="badge danger">首板规则</span></div>
+    <div class="d"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D600206" target="_self" rel="noopener noreferrer">有研新材</a>（首板，竞价不在2-8%，101 分，竞价 +1.73%，竞价额 1.36亿，昨日额 47.51亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002771" target="_self" rel="noopener noreferrer">真视通</a>（首板，竞价不在2-8%，70 分，竞价 +9.34%，竞价额 0.47亿，昨日额 1.40亿）、<a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002652" target="_self" rel="noopener noreferrer">扬子新材</a>（首板，竞价不在2-8%，42 分，竞价 +0.00%，竞价额 0.16亿，昨日额 2.72亿）</div>
+  </div>
+  <div class="drop">
+    <div class="t"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002959" target="_self" rel="noopener noreferrer">小熊电器</a> <span class="badge danger">连板规则</span></div>
+    <div class="d"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D0%26code%3D002959" target="_self" rel="noopener noreferrer">小熊电器</a>（连板，竞价不在2-8%，49 分，竞价 +0.25%，竞价额 0.20亿，昨日额 4.14亿）</div>
+  </div>
+  <div class="drop">
+    <div class="t"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D601188" target="_self" rel="noopener noreferrer">龙江交通</a> <span class="badge">分数门槛</span></div>
+    <div class="d"><a class="ths-stock" href="https://mlink.eastmoney.com/h52n/nlink.html?type=localurl&amp;id=eastmoney%3A%2F%2Fpage%2Fstockpage%3Fmarket%3D1%26code%3D601188" target="_self" rel="noopener noreferrer">龙江交通</a>（趋势板，26 分，竞价 +1.27%，竞价额 0.52亿，昨日额 18.27亿）</div>
+  </div>
+</div>
+
+<script>/* stock href is official East Money UL; no rewrite */</script>
+</body>
+</html>
